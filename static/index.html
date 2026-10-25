@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terminal Theme Lab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Windows Terminal palette editor</p>
+        <h1>Terminal Theme Lab</h1>
+        <p class="intro">Tune exact colors against realistic ANSI output, then export a scheme object for Windows Terminal.</p>
+      </div>
+      <div class="actions">
+        <button id="reset" class="secondary">Reset draft</button>
+        <button id="download" class="secondary">Download JSON</button>
+        <button id="save">Save palette</button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="editor panel">
+        <label class="name-field">Scheme name<input id="theme-name" type="text"></label>
+        <p class="picker-hint">Click a color square to open the visual picker, or enter an exact hex value.</p>
+        <div id="color-controls"></div>
+      </aside>
+
+      <div class="previews">
+        <section class="terminal panel" id="terminal-preview">
+          <div class="terminal-bar"><span></span><span></span><span></span><strong>Ubuntu — WSL</strong></div>
+          <div class="terminal-body">
+            <p><i data-color="green">wadey@wsl</i><b data-color="white">:</b><i data-color="blue">~/projects</i><b data-color="foreground">$</b> <span data-color="foreground">git status</span></p>
+            <p data-color="brightBlack">On branch main</p>
+            <p data-color="foreground">Changes not staged for commit:</p>
+            <p>  <span data-color="red">modified:</span>   <span data-color="brightBlue">lua/user/options.lua</span></p>
+            <p>  <span data-color="green">added:</span>     <span data-color="brightCyan">themes/nova.json</span></p>
+            <p><span data-color="brightYellow">warning:</span> <span data-color="foreground">palette preview uses exact ANSI slots</span></p>
+            <p><span data-color="brightRed">error:</span> <span data-color="foreground">example diagnostic message</span></p>
+            <p><span data-color="brightPurple">function</span> <span data-color="brightBlue">render_theme</span><span data-color="foreground">(</span><span data-color="yellow">palette</span><span data-color="foreground">):</span></p>
+            <p>    <span data-color="purple">return</span> <span data-color="brightGreen">"ready"</span> <span data-color="brightBlack"># comment</span></p>
+            <p><span class="selection" data-color="foreground"> selected terminal text </span><span class="cursor"> </span></p>
+          </div>
+        </section>
+
+        <section class="panel swatch-panel">
+          <div class="section-heading"><h2>ANSI palette</h2><span id="status">Loading…</span></div>
+          <div class="swatch-grid" id="swatches"></div>
+        </section>
+
+        <section class="panel contrast-panel">
+          <h2>Readability</h2>
+          <div id="contrast-results"></div>
+          <p class="hint">WCAG contrast is a useful warning signal, though terminal colors also appear as accents and backgrounds.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
+

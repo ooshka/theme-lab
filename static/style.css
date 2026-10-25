@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #090b10;
+  color: #e7eaf0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 920px; }
+button, input { font: inherit; }
+main { max-width: 1480px; margin: auto; padding: 32px; }
+header { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 24px; }
+h1 { margin: 3px 0 8px; font-size: 34px; letter-spacing: -0.03em; }
+h2 { margin: 0; font-size: 17px; }
+.eyebrow { margin: 0; color: #8190aa; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.intro { margin: 0; color: #9da6b8; }
+.actions { display: flex; gap: 10px; }
+button { border: 0; border-radius: 8px; padding: 10px 15px; background: #78b8d8; color: #081018; font-weight: 700; cursor: pointer; }
+button.secondary { background: #202631; color: #c9d0dc; }
+.workspace { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 18px; align-items: start; }
+.previews { display: grid; gap: 18px; }
+.panel { border: 1px solid #242a35; border-radius: 13px; background: #11141b; box-shadow: 0 16px 45px #0005; }
+.editor { padding: 18px; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; }
+.name-field { display: grid; gap: 7px; margin-bottom: 20px; color: #9da6b8; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.name-field input { width: 100%; border: 1px solid #303847; border-radius: 7px; background: #0b0e14; color: #e7eaf0; padding: 10px; }
+.picker-hint { margin: -8px 0 20px; color: #7f8aa0; font-size: 12px; line-height: 1.45; }
+.control-group { display: grid; gap: 8px; margin-bottom: 19px; }
+.control-group h3 { margin: 0 0 3px; color: #7f8aa0; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.color-control { display: grid; grid-template-columns: 44px 1fr 86px; gap: 10px; align-items: center; }
+.color-control label { font-size: 13px; }
+.color-control input[type="color"] { width: 44px; height: 34px; padding: 2px; border: 1px solid #465166; border-radius: 7px; background: #0b0e14; cursor: pointer; }
+.color-control input[type="text"] { min-width: 0; border: 1px solid #303847; border-radius: 5px; background: #0b0e14; color: #aeb8ca; padding: 5px 7px; font: 12px ui-monospace, monospace; }
+.terminal { overflow: hidden; }
+.terminal-bar { display: flex; align-items: center; gap: 7px; height: 42px; padding: 0 15px; background: #1c2029; color: #8993a6; font-size: 12px; }
+.terminal-bar span { width: 10px; height: 10px; border-radius: 50%; background: #4b5362; }
+.terminal-bar strong { margin-left: 8px; font-weight: 500; }
+.terminal-body { min-height: 340px; padding: 22px 26px; font: 16px/1.55 "CaskaydiaCove Nerd Font Mono", "Cascadia Mono", Consolas, monospace; }
+.terminal-body p { margin: 0; white-space: pre; }
+.terminal-body i { font-style: normal; font-weight: 700; }
+.selection { padding: 1px 2px; }
+.cursor { display: inline-block; width: 10px; height: 20px; vertical-align: -4px; }
+.swatch-panel, .contrast-panel { padding: 20px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+#status { color: #7f8aa0; font-size: 12px; }
+.swatch-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 9px; }
+.swatch { min-width: 0; }
+.swatch-color { height: 54px; border-radius: 7px; border: 1px solid #ffffff1c; }
+.swatch strong, .swatch code { display: block; overflow: hidden; text-overflow: ellipsis; }
+.swatch strong { margin-top: 6px; color: #cbd2df; font-size: 11px; }
+.swatch code { margin-top: 2px; color: #7f8aa0; font-size: 10px; }
+#contrast-results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.contrast { padding: 12px; border-radius: 8px; background: #0c0f15; }
+.contrast strong { display: block; font-size: 18px; }
+.contrast span { color: #8e99ad; font-size: 11px; }
+.contrast.pass strong { color: #8fd3a2; }
+.contrast.warn strong { color: #d6b977; }
+.hint { margin: 12px 0 0; color: #7f8aa0; font-size: 12px; }
+

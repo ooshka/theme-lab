@@ -1,0 +1,24 @@
+{
+  "name": "Nova",
+  "background": "#141824",
+  "foreground": "#C8D0E0",
+  "cursorColor": "#80C8E0",
+  "selectionBackground": "#283247",
+  "black": "#111521",
+  "red": "#B86068",
+  "green": "#58AD9E",
+  "yellow": "#C8A860",
+  "blue": "#6F9FC8",
+  "purple": "#B0A0D8",
+  "cyan": "#78B8B0",
+  "white": "#9AA4B8",
+  "brightBlack": "#586478",
+  "brightRed": "#D0909C",
+  "brightGreen": "#7AC8B6",
+  "brightYellow": "#D4B878",
+  "brightBlue": "#84BCE2",
+  "brightPurple": "#B0A0D8",
+  "brightCyan": "#72D0CF",
+  "brightWhite": "#DCE4F0"
+}
+

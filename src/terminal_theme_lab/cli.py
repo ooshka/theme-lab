@@ -14,7 +14,7 @@ def project_root() -> Path:
 
 def main() -> None:
     root = project_root()
-    parser = argparse.ArgumentParser(description="Edit and export Windows Terminal color schemes")
+    parser = argparse.ArgumentParser(description="Edit and export a shared color palette")
     parser.add_argument("--theme", type=Path, default=root / "themes" / "nova.json")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -26,7 +26,7 @@ def main() -> None:
     )
     serve_parser.add_argument("--port", default=8765, type=int)
 
-    export_parser = subparsers.add_parser("export", help="write Windows Terminal scheme JSON")
+    export_parser = subparsers.add_parser("export", help="write the normalized palette JSON")
     export_parser.add_argument("--output", type=Path)
 
     args = parser.parse_args()
